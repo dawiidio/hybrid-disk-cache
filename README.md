@@ -1,11 +1,17 @@
-[![Coverage Status](https://coveralls.io/repos/github/next-boost/hybrid-disk-cache/badge.svg?branch=master)](https://coveralls.io/github/next-boost/hybrid-disk-cache?branch=master) [![Maintainability](https://api.codeclimate.com/v1/badges/270469eb02421e5c7547/maintainability)](https://codeclimate.com/github/next-boost/hybrid-disk-cache/maintainability)
+# @dawiidio/hybrid-disk-cache
 
-# hybrid-disk-cache
+### WARNING!
+**This is a forked version with backward compatibility**
+
+What's new?
+- in-memory SQLite3 database
+- temporary SQLite3 database
+- different patch for database and files to cache
 
 A hybrid disk cache library that utilized both the solid SQLite3 database and the file system.
 
 ```bash
-yarn add @next-boost/hybrid-disk-cache
+yarn add @dawiidio/hybrid-disk-cache
 ```
 
 When the value is larger than 10 kilobytes, it will be written to the file system, otherwise saved in SQLite3 database.
@@ -30,7 +36,12 @@ This hybrid idea is inspired by [`python-diskcache`](https://github.com/grantjen
 // tbd, time before deletion: This is used to control how long a key
 // should remain in the cache after expired (ttl)
 // And `cache.purge` will delete all records with ttl + tbd < now
-const cache = new Cache({ path, ttl, tbd })
+const cache = new Cache({ 
+  path, 
+  ttl, 
+  tbd,
+  dbPath
+})
 
 // set. if ttl empty, use the cache's ttl
 cache.set(key, value)
@@ -81,3 +92,4 @@ Here is the [benchmark source code](https://github.com/next-boost/hybrid-disk-ca
 ## License
 
 MIT. Copyright 2020, Rakuraku Jyo.
+Fork by @dawiidio
