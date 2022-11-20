@@ -1,6 +1,6 @@
 {
-  "name": "@next-boost/hybrid-disk-cache",
-  "version": "0.3.0",
+  "name": "@dawiidio/hybrid-disk-cache",
+  "version": "0.3.1",
   "description": "A hybrid disk cache utilize both the database and the file system.",
   "main": "dist/index.js",
   "scripts": {
@@ -18,10 +18,17 @@
     "name": "Rakuraku Jyo",
     "email": "jyo.rakuraku@gmail.com"
   },
-  "homepage": "https://github.com/next-boost/hybrid-disk-cache",
+  "contributors": [
+    {
+      "email": "dawid@dawiid.io",
+      "name": "Dawid Wojda",
+      "url": "https://dawiid.io"
+    }
+  ],
+  "homepage": "https://github.com/dawiidio/hybrid-disk-cache",
   "repository": {
     "type": "git",
-    "url": "https://github.com/next-boost//hybrid-disk-cache.git"
+    "url": "https://github.com/dawiidio//hybrid-disk-cache.git"
   },
   "license": "MIT",
   "dependencies": {
